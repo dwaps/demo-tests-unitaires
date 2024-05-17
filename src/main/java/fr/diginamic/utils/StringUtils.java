@@ -15,6 +15,10 @@ public final class StringUtils {
 	 * @return distance
 	 */
 	public static int levenshteinDistance(CharSequence lhs, CharSequence rhs) {
+		if (lhs == null || rhs == null) {
+			throw new NullPointerException("Null parameters are not allowed");
+		}
+
 		int len0 = lhs.length() + 1;
 		int len1 = rhs.length() + 1;
 
